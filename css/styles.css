@@ -1,4 +1,111 @@
+/* 
+font-family: source-sans-3, sans-serif;
+font-weight: 700;
+font-style: normal;
+font-family: source-sans-3, sans-serif;
+font-weight: 400;
+font-style: normal; */
+
 body {
     background-color: #818cf8;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8'%3E%3Cg fill='%23f1f5f9' fill-opacity='0.26'%3E%3Cpath fill-rule='evenodd' d='M0 0h4v4H0V0zm4 4h4v4H4V4z'/%3E%3C/g%3E%3C/svg%3E");
+    font-family: source-sans-3, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.flex-container {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.inner-container {
+    padding: 0 1rem;
+}
+
+/* ****************** typography ****************** */
+h1 {
+    font-size: 1.125rem;
+    line-height: 3.75rem;
+}
+
+h2 {
+    font-family: source-sans-3, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+/* ****************** header ********************** */
+header {
+    background-color: #f8fafc;
+}
+
+button {
+    background-color: #f8fafc;
+    border: none;
+}
+
+svg {
+    width: 1.25rem;
+}
+
+header a {
+    text-decoration: none;
+    color: #475569;
+    font-size: .875rem;
+}
+
+h1 a {
+    color: #dc2626;
+}
+
+nav {
+    flex: 1 0 100%;
+}
+
+.menu li {
+    line-height: 3.125rem;
+}
+
+.menu a {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 0.5rem;
+}
+
+.menu a:hover {
+    background-color: #e2e8f0;
+}
+
+.menu svg {
+    width: .625rem;
+}
+
+.submenu {
+    visibility: hidden;
+    opacity: 0;
+    overflow: hidden;
+    max-height: 0;
+}
+
+/* What do you have over? --> first selector + :hover
+what do you want to change? --> second selector */
+
+.menu li:hover > .submenu {
+    visibility: visible;
+    opacity: 1;
+    overflow: visible;
+    max-height: 14.0625rem;
+}
+
+/* This works to an extent, but the hover state has its limitatios. A better way to develop a dropdown nav is with javascript */
+
+@media screen and (min-width: 1100px) {
+    .inner-container {
+        padding: 0;
+        width: 1000px;
+        margin: 0 auto;
+    }
 }
